@@ -48,6 +48,7 @@ Using the console, create a Ubuntu virtual computer with a GPU XL plan, in the r
 ```
 git clone https://github.com/sebranchett/lightsail-for-research-gpu-docker-pytorch.git
 cd lightsail-for-research-gpu-docker-pytorch
+chmod u+x installation.sh
 ./installation.sh
 ```
 The installation script will install Docker Engine and the NVIDIA container toolkit. It will then test a CUDA container and run a PyTorch example. After completion, the file `quickstart.log` should end with:
@@ -64,3 +65,5 @@ as described in the [PyTorch documentation](https://pytorch.org/tutorials/beginn
 Consider creating a 'Cost Control' rule for your virtual computer. The default settings will automatically stop the computer if the CPU has been idle for 5 minutes. This could save you a lot of money.
 
 Consider making a 'Snapshot' of your virtual computer, just after you're happy with the installation. You can then use this Snapshot to start a new virtual computer in the future, perhaps of a different size.
+
+Learn how to connect to your virtual machine using ssh [here](https://docs.aws.amazon.com/lightsail-for-research/latest/ug/connect-using-ssh.html).
