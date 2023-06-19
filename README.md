@@ -62,7 +62,7 @@ as described in the [PyTorch documentation](https://pytorch.org/tutorials/beginn
 > Don't forget to stop the virtual computer once you've finished.
 
 ## Next steps
-Consider creating a 'Cost Control' rule for your virtual computer. The default settings will automatically stop the computer if the CPU has been idle for 5 minutes. This could save you a lot of money.
+Consider creating a 'Cost Control' rule for your virtual computer. The default settings will automatically stop the computer if the CPU has been idle for 10 minutes. This could save you a lot of money.
 
 Consider making a 'Snapshot' of your virtual computer, just after you're happy with the installation. You can then use this Snapshot to start a new virtual computer in the future, perhaps of a different size.
 
