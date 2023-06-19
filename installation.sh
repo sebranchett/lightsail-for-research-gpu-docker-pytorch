@@ -12,9 +12,7 @@ echo \
 
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo groupadd docker
-sudo usermod -aG docker $USER
-docker run --rm hello-world  # should now work without sudo
+sudo docker run --rm hello-world  # should now work without sudo
 
 # 2) nvidia-smi is pre-installed, so assume nvidia-smi is installed
 
@@ -32,4 +30,4 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 nvidia-ctk --version  # check installation
 
 # 4) Run a test job using an NVIDIA Docker container and PyTorch example
-docker run --gpus all --rm -v "$PWD":/workspace/test nvcr.io/nvidia/pytorch:22.10-py3 /bin/sh -c "cd test;python < quickstart.py > quickstart.log"
+sudo docker run --gpus all --rm -v "$PWD":/workspace/test nvcr.io/nvidia/pytorch:22.10-py3 /bin/sh -c "cd test;python < quickstart.py > quickstart.log"
